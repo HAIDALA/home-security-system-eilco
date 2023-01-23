@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "home-security-system-eilco": {
+      "hosting": {
+        "projet": [
+          "home-security-system-eilco"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "home-security-system-eilco"
+  }
+}
