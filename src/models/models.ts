@@ -1,6 +1,7 @@
-export interface interfaceName{ 
-    Temperature? : String;
-    humidity? : String;
+export interface ESP32_DATA{ 
     Access? : Boolean;
     DetectAccess? : Boolean;
+    DetectPassenger? : Boolean;
+    Humidite? : Number;
+    Temperature? : Number;
 }
