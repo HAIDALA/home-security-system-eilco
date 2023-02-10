@@ -18,6 +18,15 @@
     height: 50px;
     margin-top: 20px;
   }
+
+  .presence-status {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+  }
   
   p.allowed {
     color: green;
@@ -26,7 +35,15 @@
   p.not-allowed {
     color: red;
   }
+
+  p.present {
+    color: green;
+  }
   
+  p.not-present {
+    color: red;
+  }
+
   .dashboard-river {
     position: relative;
     display: flex;

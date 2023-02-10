@@ -14,9 +14,14 @@
                 label="humidity" append="%"></ngx-gauge>
                 </div>
             </div>
-            <div class="access-status" *ngIf="data.presence !== undefined">
-                <p [ngClass]="{'allowed': data.Access, 'not-allowed': !data.Access}">
+            <div class="access-status" *ngIf="data.authorizationResult !== undefined">
+                <p [ngClass]="{'allowed': data.authorizationResult, 'not-allowed': !data.authorizationResult}">
                 {{ data.Access ? 'Access is allowed' : 'Access is not allowed' }}
+                </p>
+            </div>
+            <div class="presence-status" *ngIf="data.presence !== undefined">
+                <p [ngClass]="{'present': data.presence, 'not-present': !data.presence}">
+                {{ data.Access ? 'Mouvement is detected' : 'Mouvement is not detected' }}
                 </p>
             </div>
         </div>
