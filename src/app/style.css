@@ -1,18 +1,49 @@
-.access-status {
+.gauges-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gauge-container {
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .access-status {
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     margin-top: 20px;
-    
-    }
-    
-    p.allowed {
+  }
+  
+  p.allowed {
     color: green;
-    }
-    
-    p.not-allowed {
+  }
+  
+  p.not-allowed {
     color: red;
+  }
+  
+  .dashboard-river {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     }
-    
+
+    .dashboard-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 90%;
+    background: white;
+    box-shadow: 0 20px 40px 0 black, inset 0px -10px 17px 1px }  
