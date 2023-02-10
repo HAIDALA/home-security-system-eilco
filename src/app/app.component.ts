@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
+import { AngularFireDatabase, AngularFireObject, AngularFireList } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { ESP32_DATA } from 'src/models/models';
 @Component({
@@ -12,7 +12,7 @@ import { ESP32_DATA } from 'src/models/models';
 export class AppComponent implements OnInit {
   title = 'projet';
   private fichierRef: AngularFireObject<ESP32_DATA>;
-  public fichier: Observable<any>;
+  public fichier?: Observable<any>;
 
   
   constructor(db: AngularFireDatabase) {
