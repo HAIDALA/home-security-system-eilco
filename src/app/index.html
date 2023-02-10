@@ -16,7 +16,7 @@
             </div>
             <div class="access-status" *ngIf="data.authorizationResult !== undefined">
                 <p [ngClass]="{'allowed': data.authorizationResult, 'not-allowed': !data.authorizationResult}">
-                {{ data.Access ? 'Access is allowed' : 'Access is not allowed' }}
+                {{ data.Access ? 'Access is allowed' : 'Access is not allowed' }} for the card : {{data.cardID}}
                 </p>
             </div>
             <div class="presence-status" *ngIf="data.presence !== undefined">

@@ -8,5 +8,6 @@ export interface ESP32_DATA{
     humidity? : Number;
     presence? : Number;
     temprature? : Number;
-    authorizationResultat: Boolean;
+    authorizationResultat?: Boolean;
+    cardID? : String;
 }
