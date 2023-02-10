@@ -2,7 +2,7 @@
   "hosting": [
     {
       "site": "home-security-system-eilco",
-      "target": "projet",
+      
       "public": "public",
       "ignore": [
         "**/.*"
