@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireObject, AngularFireList } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { ESP32_DATA } from 'src/models/models';
+
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './index.html',
   styleUrls: ['./app.component.css']
 })
 
