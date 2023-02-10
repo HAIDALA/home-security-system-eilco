@@ -6,7 +6,7 @@ import { ESP32_DATA } from 'src/models/models';
 @Component({
   selector: 'app-root',
   templateUrl: './index.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./style.css']
 })
 
 

@@ -4,4 +4,5 @@ export interface ESP32_DATA{
     DetectPassenger? : Boolean;
     Humidite? : Number;
     Temperature? : Number;
+    IdCard? : Number;
 }

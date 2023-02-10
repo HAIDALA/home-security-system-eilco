@@ -3,6 +3,17 @@
     <div *ngIf="fichier | async as data">
       <p>Data from Firebase:</p>
       <pre>{{ data | json }}</pre>
-      <ngx-gauge *ngIf="data.Humidite" [value]="data.Humidite"></ngx-gauge>
+      <ngx-gauge *ngIf="data.Temperature" [value]="data.Temperature" type="arch" [thick]="10" [size]="300" 
+      label="Temperature" append="°C"></ngx-gauge>
+      <ngx-gauge *ngIf="data.Humidite" [value]="data.Humidite" type="arch" [thick]="10" [size]="300" 
+      label="Humidity" append="%"></ngx-gauge>
+      <div class="access-status" *ngIf="data.Access !== undefined">
+        <p [ngClass]="{'allowed': data.Access, 'not-allowed': !data.Access}">
+          {{ data.Access ? 'Access is allowed' : 'Access is not allowed' }}
+        </p>
+      </div>
     </div>
   </div>
+
+
+

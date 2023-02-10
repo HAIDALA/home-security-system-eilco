@@ -1,0 +1,18 @@
+.access-status {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+    
+    }
+    
+    p.allowed {
+    color: green;
+    }
+    
+    p.not-allowed {
+    color: red;
+    }
+    
