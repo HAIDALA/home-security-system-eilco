@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'projet';
   private fichierRef: AngularFireObject<ESP32_DATA>;
   public fichier?: Observable<any>;
-
+  showAccessStatus = true;
   
   constructor(db: AngularFireDatabase) {
     this.fichierRef = db.object('ESP32_DATA');
@@ -25,6 +25,10 @@ export class AppComponent implements OnInit {
     this.fichierRef.snapshotChanges().subscribe((data) => {
       if (data.payload.exists()) {
         console.log(data.payload.val());
+        setTimeout(() => {
+          this.showAccessStatus = false;
+        }, 10000);
+
       } else {
         console.log("Node does not exist or there is no data in the node.");
       }

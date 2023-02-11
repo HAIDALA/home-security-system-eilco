@@ -15,7 +15,7 @@
                 label="humidity" append="%"></ngx-gauge>
                 </div>
             </div>
-            <div class="access-status" *ngIf="data.authorizationResult !== undefined && data.cardID !== undefined">
+            <div class="access-status" *ngIf="showAccessStatus && data.authorizationResult !== undefined && data.cardID !== undefined">
                 <p [ngClass]="{'allowed': data.authorizationResult, 'not-allowed': !data.authorizationResult}">
                 {{ data.authorizationResult ? 'Access is allowed' : 'Access is not allowed' }} for the card : {{data.cardID}}
                 </p>
