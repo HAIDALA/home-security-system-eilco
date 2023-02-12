@@ -37,11 +37,12 @@
   }
 
   p.present {
-    color: green;
+    color: red;
   }
   
   p.not-present {
-    color: red;
+    
+    color: green;
   }
 
   .dashboard-river {
