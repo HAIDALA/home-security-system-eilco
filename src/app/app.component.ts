@@ -21,18 +21,29 @@ export class AppComponent implements OnInit {
     this.fichier = this.fichierRef.valueChanges();
    
   }
-  ngOnInit(): void{
+  private prevCardID: string | undefined;
+
+  checkCardIDChange(data: any): void {
+    if (data.cardID !== undefined && data.cardID !== this.prevCardID) {
+      this.showAccessStatus = true;
+      this.prevCardID = data.cardID;
+    }
+  }
+
+  ngOnInit(): void {
     this.fichierRef.snapshotChanges().subscribe((data) => {
       if (data.payload.exists()) {
-        console.log(data.payload.val());
+        const value = data.payload.val();
+        console.log(value);
+        this.checkCardIDChange(value);
+
         setTimeout(() => {
           this.showAccessStatus = false;
         }, 10000);
-
       } else {
         console.log("Node does not exist or there is no data in the node.");
       }
-    })
+    });
   }
 }
 
