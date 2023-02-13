@@ -17,6 +17,7 @@
     align-items: center;
     height: 50px;
     margin-top: 20px;
+    font-weight: bold;
   }
 
   .presence-status {
@@ -26,6 +27,7 @@
     align-items: center;
     height: 50px;
     margin-top: 20px;
+    font-weight: bold;
   }
   
   p.allowed {
@@ -77,3 +79,25 @@
       background-position: center;
       margin-bottom: 0px;
       }
+
+      .notification_temp {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        }
+
+        .notification_hum {
+          position: absolute;
+          top: 90px;
+          right: 0px;
+          background-color: red;
+          color: white;
+          padding: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          }

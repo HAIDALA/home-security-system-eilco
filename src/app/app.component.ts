@@ -11,7 +11,7 @@ import { ESP32_DATA } from 'src/models/models';
 
 
 export class AppComponent implements OnInit {
-  title = 'projet';
+  title = 'Connected House';
   private fichierRef: AngularFireObject<ESP32_DATA>;
   public fichier?: Observable<any>;
   showAccessStatus = true;
@@ -23,23 +23,25 @@ export class AppComponent implements OnInit {
   }
   private prevCardID: string | undefined;
 
-  checkCardIDChange(data: any): void {
-    if (data.cardID !== undefined && data.cardID !== this.prevCardID) {
-      this.showAccessStatus = true;
-      this.prevCardID = data.cardID;
-    }
-  }
+  // checkCardIDChange(data: any): void {
+  //   if (data.cardID !== undefined && data.cardID !== this.prevCardID) {
+  //     this.showAccessStatus = true;
+  //     this.prevCardID = data.cardID;
+  //   }
+  // }
 
   ngOnInit(): void {
     this.fichierRef.snapshotChanges().subscribe((data) => {
       if (data.payload.exists()) {
         const value = data.payload.val();
         console.log(value);
-        this.checkCardIDChange(value);
+        // this.checkCardIDChange(value);
 
-        setTimeout(() => {
-          this.showAccessStatus = false;
-        }, 10000);
+      
+
+        // setTimeout(() => {
+        //   this.showAccessStatus = false;
+        // }, 200000);
       } else {
         console.log("Node does not exist or there is no data in the node.");
       }

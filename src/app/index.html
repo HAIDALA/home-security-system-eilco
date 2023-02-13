@@ -1,7 +1,8 @@
+<title>Connected House</title>
 <div class="dashboard-river">
     <div class="pic"></div>
     <div class="dashboard-container">
-            <h1> Dashbord Home Security</h1>
+            <h1> Dashbord : Connected House</h1>
             <div *ngIf="fichier | async as data">
             <!-- <p>Data from Firebase:</p>
             <pre>{{ data | json }}</pre> -->
@@ -24,6 +25,12 @@
                 <p [ngClass]="{'present': data.presence, 'not-present': !data.presence}">
                 {{ data.presence ? 'Mouvement is detected' : 'Mouvement is not detected' }}
                 </p>
+            </div>
+            <div *ngIf="data.temperature && data.temperature > 23.4 " class="notification_temp">
+                <p>Temperature is above 23.5°C!</p>
+            </div>
+            <div *ngIf="data.humidity && data.humidity > 70 " class="notification_hum">
+                <p>Humidity is too high!</p>
             </div>
         </div>
     </div>
